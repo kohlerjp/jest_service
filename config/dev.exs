@@ -3,7 +3,7 @@ use Mix.Config
 # Configure your database
 config :jest_service, JestService.Repo,
   username: "postgres",
-  password: "",
+  password: "postgres",
   database: "jest_service_dev",
   hostname: "localhost",
   show_sensitive_data_on_connection_error: true,
