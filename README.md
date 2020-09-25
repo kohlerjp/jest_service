@@ -15,10 +15,11 @@ To start your Phoenix server:
 
 API is now available at [`localhost:4000/api/encode`](http://localhost:4000/api/encode)
 
-### Starting with docker
-The project can also be built with docker. Running `docker-compose build` will
-build the docker image. Running `docker-compose up` will start the phoenix application,
-setup the database and run a postgres server.
+### Starting with Docker
+The project can also be run with Docker. The image is available on Docker Hub.
+The image can be pulled by running `docker pull johnpkohler/jest_service_phoenix:1.0`.
+To start the web server and postgres database, run `docker-compose up` from the root
+directory of the project. The web server will be available at http://localhost:4000.
 
 ## Usage
 The JestService provides two endpoints, `/api/encode` and `/api/decode`.

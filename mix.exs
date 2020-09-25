@@ -45,7 +45,7 @@ defmodule JestService.MixProject do
       {:gettext, "~> 0.11"},
       {:jason, "~> 1.0"},
       {:plug_cowboy, "~> 2.0"},
-      {:jest_parser, git: "https://github.com/kohlerjp/jest_parser.git"}
+      {:jest_parser, git: "https://github.com/kohlerjp/jest_parser.git", tag: "0.1"}
     ]
   end
 
