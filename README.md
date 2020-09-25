@@ -1,23 +1,27 @@
 # JestService
 
-TODO://
+JestService provides an API for encoding and decoding jokes in the JESt format.
 
 ## Up and running
-The JestService server can be started locally through mix, or through the docker image.
+The JestService server can be started locally through mix, or through docker containers.
+
 ### Starting with mix
 To start your Phoenix server:
 
   * Install dependencies with `mix deps.get`
-  * Create and migrate your database with `mix ecto.setup`
+  * Create and migrate the database with `mix ecto.setup`
   * Install Node.js dependencies with `npm install` inside the `assets` directory
   * Start Phoenix endpoint with `mix phx.server`
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
+API is now available at [`localhost:4000/api/encode`](http://localhost:4000/api/encode)
 
-### Starting with docker image
+### Starting with docker
+The project can also be built with docker. Running `docker-compose build` will
+build the docker image. Running `docker-compose up` will start the phoenix application,
+setup the database and run a postgres server.
 
 ## Usage
-The JestService provides to endpoints, `/api/encode` and `/api/decode`.
+The JestService provides two endpoints, `/api/encode` and `/api/decode`.
 To use the service, send a POST request to either endpoint with the appropriate parameters.
 
 ### Encode

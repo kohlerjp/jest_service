@@ -1,0 +1,28 @@
+# Version of docker-compose
+version: '3'
+
+services:
+  phoenix:
+    build:
+      context: .
+    environment:
+      PGUSER: postgres
+      PGPASSWORD: postgres
+      PGDATABASE: jest_service_dev
+      PGPORT: 5432
+      PGHOST: jest_service_db_1
+    ports:
+      - "4000:4000"
+    depends_on:
+      - db
+  db:
+    image: postgres:12.4
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      PGDATA: /var/lib/postgresql/data/pgdata
+    restart: always
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+volumes:
+  pgdata:
