@@ -56,7 +56,7 @@ defmodule JestServiceApiWeb.EncodingControllerTest do
   # Testing insertion into database
   test "Database is updated on successful encoding", %{conn: conn} do
     post_params = %{
-      body: "What do you call cheese that isn't yours?",
+      body: "What do you call cheese that isn't yours",
       punchline: "Nacho Cheese",
       author: "Anita Bath"
     }
